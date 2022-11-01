@@ -1,4 +1,4 @@
-# dumb-nginx
+# nginx-cli
 
 just a small nginx reverse proxy for Docker that accepts a value from a variable.
 
