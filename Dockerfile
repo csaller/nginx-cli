@@ -1,9 +1,6 @@
-FROM alpine:3.12
+FROM alpine:latest
 
-RUN apk add --no-cache\
-    nginx~=1.18
-
-# RUN rm -rf /etc/nginx/conf.d/*
+RUN apk add --no-cache nginx
 
 COPY ./ /code/
 COPY docker-entrypoint.sh /usr/local/bin/
