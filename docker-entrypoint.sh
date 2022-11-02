@@ -7,7 +7,7 @@ if [ ${#} -eq 0 ]; then
 
   sed \
     -e "s^:DESTINATION_URL:^$DESTINATION_URL^g" \
-    /code/nginx.conf.templ > /etc/nginx/conf.d/default.conf
+    /code/nginx.conf.templ > /etc/nginx/http.d/default.conf
 
   echo "Starting nginx..."
   exec nginx -g 'daemon off;'
