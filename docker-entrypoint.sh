@@ -6,7 +6,7 @@ rm -rf /run/nginx/nginx.pid
 if [ ${#} -eq 0 ]; then
 
   sed \
-    -e "s/:DESTINATION_URL:/$DESTINATION_URL\//g" \
+    -e "s^:DESTINATION_URL:^$DESTINATION_URL^g" \
     /code/nginx.conf.templ > /etc/nginx/conf.d/default.conf
 
   echo "Starting nginx..."
